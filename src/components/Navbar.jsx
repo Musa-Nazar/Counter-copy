@@ -9,7 +9,7 @@ function Navbar({toggleMode,data}) {
   `}>
     <nav className={`${NavbarStyles.nav}`}>
       <h2 className={`${NavbarStyles.h2}`}>JS Counter</h2>
-      <div className={`${NavbarStyles.mode} before:bg-${!data.darkMode ? "black" : "[#fff]"}`} onClick={toggleMode}></div>
+      <div className={`${NavbarStyles.mode} ${!data.darkMode ? "before:bg-black" : "before:bg-[#fff]"}`} onClick={toggleMode}></div>
     </nav>
   </header>
   return xml
