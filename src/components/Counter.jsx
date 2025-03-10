@@ -17,8 +17,8 @@ function Counter({data,changeData,increment,decrement,reset}) {
       }>
         <p className={`
           ${CounterStyles.count} 
-          ${data.color === "red" ? "text-[red]" : ""}
           text-${data.darkMode === false ? "black" : "[#fff]"}`
+          ${data.color === "red" ? "text-[red]" : ""}
         }>{data.num}</p>
         <div className={`
           ${CounterStyles.line} 
