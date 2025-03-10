@@ -5,7 +5,7 @@ function Navbar({toggleMode,data}) {
   <header className={`
     ${NavbarStyles.header} 
     bg-${data.darkMode ? "black" : "[#fff]"}
-    text-${!data.darkMode ? "black" : "[#fff]"}
+    ${!data.darkMode ? "text-black" : "text-[#fff]"}
   `}>
     <nav className={`${NavbarStyles.nav}`}>
       <h2 className={`${NavbarStyles.h2}`}>JS Counter</h2>
