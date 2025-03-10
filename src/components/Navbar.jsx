@@ -4,7 +4,7 @@ function Navbar({toggleMode,data}) {
   const xml = 
   <header className={`
     ${NavbarStyles.header} 
-    bg-${data.darkMode ? "black" : "[#fff]"}
+    ${data.darkMode ? "bg-black" : "bg-[#fff]"}
     ${!data.darkMode ? "text-black" : "text-[#fff]"}
   `}>
     <nav className={`${NavbarStyles.nav}`}>
