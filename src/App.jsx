@@ -16,7 +16,7 @@ function App() {
   function increment(e) {
     e.preventDefault()
     changeData(prevData => {
-      return prevData.num === prevData.range ?
+      return prevData.num === prevData.range - 1 ?
       {...prevData
         ,num : prevData.num + 1,
         color:  "red",
@@ -28,7 +28,7 @@ function App() {
         num : 0,
         color: "black"
       }
-      :prevData.rangeCount > 0 && prevData.num === 1 ?
+      :prevData.rangeCount > 0 && prevData.num === 0 ?
       {...prevData,num : prevData.num + 1,showPop : true} 
       :
       {...prevData,num : prevData.num + 1,color: "black"}
