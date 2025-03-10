@@ -13,7 +13,7 @@ function Counter({data,changeData,increment,decrement,reset}) {
       }>
       <div className={`
         ${CounterStyles.circle} 
-        border-${data.darkMode === false ? "black" : "[#fff]"}`
+        border-${data.darkMode === false ? "black" : "white"}`
       }>
         <p className={`
           ${CounterStyles.count} 
@@ -22,7 +22,7 @@ function Counter({data,changeData,increment,decrement,reset}) {
         }>{data.num}</p>
         <div className={`
           ${CounterStyles.line} 
-          border-${data.darkMode === false ? "black" : "[#fff]"}`
+          border-${data.darkMode === false ? "black" : "white"}`
         }></div>
         <button className={`${CounterStyles.reset}`} onClick={reset}>Reset</button>
         <button className={`
