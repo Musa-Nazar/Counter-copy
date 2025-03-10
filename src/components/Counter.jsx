@@ -46,7 +46,7 @@ function Counter({data,changeData,increment,decrement,reset}) {
       <input type="number" name="range" onChange={handleRange} className={`
       ${CounterStyles.rangeInput} 
       text-${data.darkMode === false ? "black" : "[#fff]"}
-      placeholder:text-${data.darkMode === false ? "black" : "[#fff]"}
+      ${data.darkMode === false ? "placeholder:text-[#000]" : "placeholder:text-[#fff]"}
       `} placeholder="Input Range"/>
     </div>
   </> 
