@@ -17,7 +17,7 @@ function Counter({data,changeData,increment,decrement,reset}) {
       }>
         <p className={`
           ${CounterStyles.count} 
-          text-[${data.color}] 
+          ${data.color === "red" ? "red" : ""}
           text-${data.darkMode === false ? "black" : "[#fff]"}`
         }>{data.num}</p>
         <div className={`
@@ -36,7 +36,7 @@ function Counter({data,changeData,increment,decrement,reset}) {
         <p className={`
         ${CounterStyles.smallCircle} 
         ${!data.showPop ? "hidden" : "block"}
-        text-${data.darkMode === false ? "black" : "[#008000]"}
+        {data.darkMode === false ? "text-black" : "text-[#008000]"}
         border-${data.darkMode === false ? "black" : "[#fff]"}
         `}>{data.pop}</p>
       </div>
