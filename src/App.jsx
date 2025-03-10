@@ -13,30 +13,28 @@ function App() {
     showPop: false,
     darkMode : false
   });
-  function increment(e) {
-    e.preventDefault()
+  useEffect(()=>{
+    document.body.style.background = data.darkMode ? "black" : "white";
+  },[data])
+  function increment() {
     changeData(prevData => {
-      return prevData.num === prevData.range - 1 ?
-      {...prevData
-        ,num : prevData.num + 1,
-        color:  "red",
-        rangeCount : prevData.rangeCount + 1,
-        pop : prevData.pop + 1
+      const {num,range,rangeCount,showPop,pop} = prevData;
+      if (num === range - 1) {
+        return {...prevData,num :  prevData.num + 1 , color : "red" }
+      } else if (num === range) {
+        return {...prevData,num : 0 , color : "black", rangeCount : rangeCount + 1, pop : pop + 1}
+      } else {
+        if(rangeCount > 0) {
+          return {...prevData,num : prevData.num + 1, showPop : true} 
+        }
+        return {...prevData, num : num + 1}
       }
-      :prevData.num > prevData.range && prevData.rangeCount > 0 ?
-      {...prevData,
-        num : 0,
-        color: "black"
-      }
-      :prevData.rangeCount > 0 && prevData.num === 0 ?
-      {...prevData,num : prevData.num + 1,showPop : true} 
-      :
-      {...prevData,num : prevData.num + 1,color: "black"}
-    })    
+    })
   }
   function decrement() {
     changeData(prevData => {
-      return prevData.num > -1 ? {...prevData,num : prevData.num - 1} : {...prevData,num : 0}
+      const {num} = prevData;
+      return prevData.num !== 0 ? {...prevData,num : num -1 } : {...prevData,num : 0}
     })
   }
   function reset() {
@@ -50,14 +48,15 @@ function App() {
     }))
   }
   function toggleMode() {
+    console.log(data)
     changeData(prevData => ({...prevData,darkMode : !prevData.darkMode}))
   }
   const xml = 
-  <>
+  <StrictMode>
     < Navbar data={data} toggleMode={toggleMode}/>
     < Counter data={data} increment={increment} decrement={decrement} changeData={changeData} reset={reset}/>
     < Footer data={data}/>
-  </>
+  </StrictMode>
   return (xml)
 }
 export default App;
