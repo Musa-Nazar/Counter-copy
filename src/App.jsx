@@ -31,7 +31,7 @@ function App() {
       :prevData.rangeCount > 0 && prevData.num === 1 ?
       {...prevData,num : prevData.num++,showPop : true} 
       :
-      {...prevData,num : prevData.num++,color: "black"}
+      {...prevData,num : prevData.num + 1,color: "black"}
     })    
   }
   function decrement() {
