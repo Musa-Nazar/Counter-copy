@@ -18,10 +18,10 @@ function App() {
     changeData(prevData => {
       return prevData.num === prevData.range ?
       {...prevData
-        ,num : prevData.num++,
+        ,num : prevData.num + 1,
         color:  "red",
-        rangeCount : prevData.rangeCount++,
-        pop : prevData.pop++
+        rangeCount : prevData.rangeCount + 1,
+        pop : prevData.pop + 1
       }
       :prevData.num > prevData.range && prevData.rangeCount > 0 ?
       {...prevData,
@@ -29,14 +29,14 @@ function App() {
         color: "black"
       }
       :prevData.rangeCount > 0 && prevData.num === 1 ?
-      {...prevData,num : prevData.num++,showPop : true} 
+      {...prevData,num : prevData.num + 1,showPop : true} 
       :
       {...prevData,num : prevData.num + 1,color: "black"}
     })    
   }
   function decrement() {
     changeData(prevData => {
-      return prevData.num > -1 ? {...prevData,num : prevData.num--} : {...prevData,num : 0}
+      return prevData.num > -1 ? {...prevData,num : prevData.num - 1} : {...prevData,num : 0}
     })
   }
   function reset() {
