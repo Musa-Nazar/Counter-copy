@@ -7,5 +7,7 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  server : { port : 3500 }
+  server : {
+     historyApiFallback: true,
+  }
 })
