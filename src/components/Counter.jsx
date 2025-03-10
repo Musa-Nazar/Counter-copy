@@ -13,7 +13,7 @@ function Counter({data,changeData,increment,decrement,reset}) {
       }>
       <div className={`
         ${CounterStyles.circle} 
-        border-${data.darkMode === false ? "black" : "white"}`
+        ${data.darkMode === false ? "border-black" : "border-white"}`
       }>
         <p className={`
           ${CounterStyles.count} 
