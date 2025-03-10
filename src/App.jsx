@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState,useEffect,StrictMode } from "react";
 
 import Navbar from "./components/Navbar"
 import Counter from "./components/Counter"
