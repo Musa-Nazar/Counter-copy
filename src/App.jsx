@@ -1,4 +1,3 @@
-import { StrictMode } from "react"
 import { useState } from "react";
 
 import Navbar from "./components/Navbar"
@@ -54,11 +53,11 @@ function App() {
     changeData(prevData => ({...prevData,darkMode : !prevData.darkMode}))
   }
   const xml = 
-  <StrictMode>
+  <>
     < Navbar data={data} toggleMode={toggleMode}/>
     < Counter data={data} increment={increment} decrement={decrement} changeData={changeData} reset={reset}/>
     < Footer data={data}/>
-  </StrictMode>
+  </>
   return (xml)
 }
 export default App;
