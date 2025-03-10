@@ -3,4 +3,5 @@ html { font-size: 10px; }
 body { 
   font-size: 1.6rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000000;
 }
