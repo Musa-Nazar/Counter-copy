@@ -38,7 +38,7 @@ function Counter({data,changeData,increment,decrement,reset}) {
         ${CounterStyles.smallCircle} 
         ${!data.showPop ? "hidden" : "block"}
         {data.darkMode === false ? "text-black" : "text-[#008000]"}
-        border-${data.darkMode === false ? "black" : "[#fff]"}
+        ${data.darkMode === false ? "border-black" : "border-white"}
         `}>{data.pop}</p>
       </div>
     </div>
