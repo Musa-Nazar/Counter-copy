@@ -51,7 +51,6 @@ function App() {
     }))
   }
   function toggleMode() {
-    console.log(data)
     changeData(prevData => ({...prevData,darkMode : !prevData.darkMode}))
   }
   const xml = 
