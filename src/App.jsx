@@ -15,7 +15,6 @@ function App() {
   });
   useEffect(()=>{
     document.body.style.background = data.darkMode ? "black" : "white";
-    console.log(data);
   },[data])
   function increment() {
     changeData(prevData => {
